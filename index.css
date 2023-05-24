@@ -12,13 +12,28 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ToDoTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .ToDoTitle {
     font-size: 40px;
 }
 
-.ToDoMakeATask {
+.TodoTasksContainer {
+    max-height: 80vh;
+    overflow: scroll
+}
+
+.ToDoMakeATask,
+.TodoTasks {
     height: 5vh;
     width: 60vw;
     background-color: rgb(31, 158, 147);
@@ -27,7 +42,17 @@
     justify-content: center;
 }
 
-.ToDoMakeATaskInput {
+.TodoTasks {
+    border-top: 3px solid #fff; 
+}
+
+.ToDoMakeATask {
+    border-top: 3px solid #ffffff;
+    margin-top: 10px;
+}
+
+.ToDoMakeATaskInput,
+.TodoTasksItem {
     width: 90%;
     height: 5vh;
     border: none;
@@ -37,12 +62,19 @@
     padding-left: 3%;
  
 }
+
+.TodoTasksItem {
+    display: flex;
+    align-items: center;
+}
+
 .ToDoMakeATaskInput.hover,
 .ToDoMakeATaskInput.active {
     border: none;
 }
 
-.ToDoMakeATaskButton {
+.ToDoMakeATaskButton,
+.TodoTasksItemButton {
     background-color: rgb(31, 158, 147);
     height: 100%;
     width: 10%;
@@ -51,3 +83,7 @@
     border-left: 3px solid #fff;
     cursor: pointer;
 }
+
+
+
+
